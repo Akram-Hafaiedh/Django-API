@@ -3,10 +3,10 @@ import requests
 # endpoint = "https://httpbin.org/status/200/"
 # endpoint = "https://httpbin.org/anything"
 endpoint  = "http://localhost:8000/api/" 
-get_response = requests.get(endpoint,json={"product_id":123}) #HTTP REQUEST
-print(get_response.headers)
-print(get_response.status_code) #HTTP STATUS CODE 
-print(get_response.text) #RAW DATA
+get_response = requests.post(endpoint,json={"title":"Abc123","content":"This is a title","price":"abc134"}) #HTTP REQUEST
+# print(get_response.headers)
+# print(get_response.status_code) #HTTP STATUS CODE 
+# print(get_response.text) #RAW DATA
 # print(get_response.json()['message']) #JSON 
 # print(get_response.json()) #JSON 
 

@@ -13,5 +13,13 @@ class ProductSerializer(serializers.ModelSerializer):
             'my_discount',
         ]
     def get_my_discount(self, obj):
-        print(obj.id)
+        if not hasattr(obj, 'id'):
+            return None
+        if not isinstance(obj,Product):
+            return None
         return obj.get_discount() 
+        # try:
+        #     return obj.get_discount() 
+        # except: 
+        #     return None 
+        # print(obj.id)
